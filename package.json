@@ -1,0 +1,26 @@
+{
+  "name": "mojosa",
+  "version": "1.0.1",
+  "bin": {
+    "mojosa": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "vitest": "^0.28.0",
+    "tsx": "^3.12.7"
+  }
+}
