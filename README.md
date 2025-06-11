@@ -35,8 +35,6 @@ npx mojosa ./src/ExampleInterface.ts ExampleInterface
 mojosa <path-to-typescript-file> <name-of-interface>
 ```
 
-When run, the CLI will prompt you to select the interface name from the file and specify an output path.
-
 ---
 
 ## Example
@@ -55,13 +53,8 @@ export interface UserContext {
 Run:
 
 ```bash
-mojosa ./src/UserContext.ts UserContext
+npx mojosa ./src/UserContext.ts UserContext
 ```
-
-You will be prompted to:
-
-- Select the interface to generate context for (e.g., `UserContext`)
-- Specify output file path (default suggestion: `UserContex.tsx`)
 
 The generated React context file will include:
 
@@ -69,6 +62,8 @@ The generated React context file will include:
 - `useUserContext` hook
 - Typed state variables and functions matching the interface
 - Stub implementations for functions throwing "not implemented" errors
+
+The file will be generated in the directory in which the command was run.
 
 ---
 
