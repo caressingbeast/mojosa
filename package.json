@@ -1,11 +1,11 @@
 {
   "name": "mojosa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "mojosa": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup ./src",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "test": "vitest",
