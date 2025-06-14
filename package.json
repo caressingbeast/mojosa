@@ -1,6 +1,6 @@
 {
   "name": "mojosa",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "bin": {
     "mojosa": "dist/cli.js"
   },
@@ -12,15 +12,24 @@
     "prepare": "npm run build"
   },
   "dependencies": {
+    "commander": "^14.0.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.4.0"
   },
+  "author": "Brandon Burning <brando@brando.wtf> (http://brandonburning.com)",
+  "homepage": "https://github.com/caressingbeast/mojosa",
+  "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
     "@types/node": "^20.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
-    "prettier": "^3.0.0",
-    "vitest": "^0.28.0",
-    "tsx": "^3.12.7"
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "tsx": "^3.12.7",
+    "typescript-eslint": "^8.34.0",
+    "vitest": "^0.28.0"
   }
 }

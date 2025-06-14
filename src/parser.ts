@@ -1,4 +1,4 @@
-import ts from 'typescript';
+import ts from "typescript";
 
 export function extractInterface(sourceText: string, interfaceName: string): Record<string, string> {
   const source = ts.createSourceFile('temp.ts', sourceText, ts.ScriptTarget.Latest, true);

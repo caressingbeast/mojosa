@@ -9,23 +9,23 @@ function isFunctionType(type: string): boolean {
 
 function getDefaultValue(type: string): string {
   const t = type.trim();
-  if (t === 'string') return "''";
-  if (t === 'number') return '0';
-  if (t === 'boolean') return 'false';
-  if (isFunctionType(t)) return '() => {}';
-  return 'null';
+  if (t === 'string') return '""';
+  if (t === 'number') return "0";
+  if (t === 'boolean') return "false";
+  if (isFunctionType(t)) return "() => {}";
+  return "null";
 }
 
 function extractParameters(type: string): string {
   // Matches between parentheses at start: ( ... ) => ...
   const match = type.match(/^\(([^)]*)\)\s*=>/);
-  return match ? match[1].trim() : '';
+  return match ? match[1].trim() : "";
 }
 
 function extractReturnType(type: string): string {
   // Matches return type after =>
   const match = type.match(/=>\s*(.+)$/);
-  return match ? match[1].trim() : 'void';
+  return match ? match[1].trim() : "void";
 }
 
 export function generateReactContext(name: string, fields: Record<string, string>): string {
@@ -48,7 +48,7 @@ export function generateReactContext(name: string, fields: Record<string, string
   const methodPlaceholders = functionFields.map(([key, type]) => {
     const params = extractParameters(type);
     const returnType = extractReturnType(type);
-    return `  const ${key} = (${params}): ${returnType} => { throw new Error('${key} not implemented'); };`;
+    return `  const ${key} = (${params}): ${returnType} => { throw new Error("${key} not implemented"); };`;
   });
 
   const valueObject = [
@@ -57,7 +57,7 @@ export function generateReactContext(name: string, fields: Record<string, string
   ];
 
   return `
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface ${pascalName}State {
 ${interfaceLines.join('\n')}
