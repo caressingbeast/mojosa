@@ -4,8 +4,8 @@ import { Command } from "commander";
 import fs from "fs";
 import path from "path";
 
-import { generateReactContext } from "./generator";
-import { extractInterface } from "./parser";
+import { generateReactContext } from "./generator.js";
+import { extractInterface } from "./parser.js";
 
 const program = new Command();
 

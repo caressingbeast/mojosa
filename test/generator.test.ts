@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateReactContext } from '../src/generator';
+import { generateReactContext } from '../src/generator.js';
 
 describe('generateReactContext', () => {
   it('includes state and method placeholders correctly', () => {
