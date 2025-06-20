@@ -1,6 +1,7 @@
 {
   "name": "mojosa",
-  "version": "1.0.5",
+  "description": "Turns your TypeScript interface into ready-to-use React context, like magic but real.",
+  "version": "1.0.6",
   "main": "src/cli.js",
   "bin": {
     "mojosa": "dist/cli.js"
